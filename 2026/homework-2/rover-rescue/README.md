@@ -4,9 +4,13 @@ Use eight sensor measurements to predict firm, rough, and sand terrain. The simu
 
 ## Start locally
 
+These commands use sparse checkout to download only the Rover Rescue project files and dataset, along with Git metadata. Other course files are excluded from the working folder.
+
 ```bash
-git clone https://github.com/be-prado/csci4521.git
-cd csci4521/2026/homework-2/rover-rescue
+git clone --filter=blob:none --no-checkout https://github.com/be-prado/csci4521.git rover-rescue-download
+git -C rover-rescue-download sparse-checkout set --no-cone "/2026/homework-2/rover-rescue/"
+git -C rover-rescue-download checkout main
+cd rover-rescue-download/2026/homework-2/rover-rescue
 python -m pip install -r requirements.txt
 python run_demo.py
 ```
@@ -18,8 +22,10 @@ This loads the supplied data and runs a simple “all firm” prediction to chec
 Create a blank notebook and run this cell:
 
 ```python
-!git clone https://github.com/be-prado/csci4521.git
-%cd csci4521/2026/homework-2/rover-rescue
+!git clone --filter=blob:none --no-checkout https://github.com/be-prado/csci4521.git rover-rescue-download
+!git -C rover-rescue-download sparse-checkout set --no-cone "/2026/homework-2/rover-rescue/"
+!git -C rover-rescue-download checkout main
+%cd rover-rescue-download/2026/homework-2/rover-rescue
 !pip -q install -r requirements.txt
 !python run_demo.py
 ```
