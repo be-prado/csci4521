@@ -1,0 +1,41 @@
+{
+  "assignment": "HW2 Rover Rescue",
+  "student_id": "demo3",
+  "grid_shape": [
+    28,
+    28
+  ],
+  "sensor_columns": [
+    "sensor_1",
+    "sensor_2",
+    "sensor_3",
+    "sensor_4",
+    "sensor_5",
+    "sensor_6",
+    "sensor_7",
+    "sensor_8"
+  ],
+  "terrain_names": [
+    "firm",
+    "rough",
+    "sand"
+  ],
+  "practice_start_yx": [
+    26,
+    1
+  ],
+  "practice_goal_yx": [
+    1,
+    26
+  ],
+  "mission_start_yx": [
+    26,
+    1
+  ],
+  "mission_goal_yx": [
+    1,
+    26
+  ],
+  "n_clusters": 3,
+  "assignment_version": 2
+}
